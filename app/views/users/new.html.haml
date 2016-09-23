@@ -2,10 +2,10 @@
 
 = form_tag new_user_path do
 
-  = label :user, :user_id, 'User-ID'
+  = label :user, :user_id, 'User-ID', :id => 'signup_user'
   = text_field :user_id, 'user_id'
 
-  = label :user, :email, 'E-Mail'
+  = label :user, :email, 'E-Mail', :id => 'signup_email'
   = email_field :email, 'email'
 
-  = submit_tag 'Create my account'
+  = submit_tag 'Create my account', :id => 'signup_create'
