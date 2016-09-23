@@ -10,9 +10,9 @@ class UsersController < ApplicationController
   #   # will render app/views/movies/show.<extension> by default
   # end
 
-  def index
-    @users = User.all
-  end
+  # def index
+  #   @users = User.all
+  # end
 
   def new
     # default: render 'new' template
