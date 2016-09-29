@@ -1,4 +1,6 @@
 class MoviesController < ApplicationController
+  before_filter :set_current_user  # Causes set_current_user method to execute prior
+                                   # to executing any of the MoviesController actions.
 
   def movie_params
     params.require(:movie).permit(:title, :rating, :description, :release_date)

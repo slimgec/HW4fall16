@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  #get 'users/new'
-
-  #get 'users/create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -20,6 +17,10 @@ Rails.application.routes.draw do
 
   resources :movies
   resources :users
+  
+  match '/login', to: 'sessions#new', via: :get
+  match '/login_create', to: 'sessions#create', via: :post
+  match '/logout', to: 'sessions#destroy', via: :delete
   
   # Example resource route with options:
   #   resources :products do
