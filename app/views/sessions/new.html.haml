@@ -2,11 +2,11 @@
 
 = form_tag login_create_path, :method => 'post' do
 
-  = label :session, :user_id, 'User-ID', :id => 'login_user'
-  = text_field :session, 'user_id'
+  = label :session, :user_id, 'User-ID'
+  = text_field :session, 'user_id', :id => 'login_user'
 
-  = label :session, :email, 'E-Mail', :id => 'login_email'
-  = email_field :session, 'email'
+  = label :session, :email, 'E-Mail'
+  = email_field :session, 'email', :id => 'login_email'
 
   = submit_tag 'Login to my account', :id => 'login_submit'
   
